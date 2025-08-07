@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐴 Horseland - The Most Fun Horse Website! 🐴</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-emoji">🐴</span>
+                <span class="logo-text">Horseland</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#facts" class="nav-link">Fun Facts</a></li>
+                <li><a href="#breeds" class="nav-link">Breeds</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Horseland! 🐎</h1>
+            <p class="hero-subtitle">The most galloping good time on the web!</p>
+            <div class="hero-horses">
+                <span class="horse-emoji running">🐴</span>
+                <span class="horse-emoji running">🦄</span>
+                <span class="horse-emoji running">🐎</span>
+            </div>
+            <button class="cta-button" onclick="scrollToSection('facts')">Start Exploring!</button>
+        </div>
+        <div class="floating-elements">
+            <span class="floating-emoji">🌟</span>
+            <span class="floating-emoji">🥕</span>
+            <span class="floating-emoji">🏆</span>
+            <span class="floating-emoji">🌈</span>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section id="facts" class="facts-section">
+        <div class="container">
+            <h2 class="section-title">Amazing Horse Facts! 🤔</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-icon">👁️</div>
+                    <h3>Super Vision</h3>
+                    <p>Horses have almost 360-degree vision! They can see behind them without turning their heads.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">💤</div>
+                    <h3>Standing Sleepers</h3>
+                    <p>Horses can sleep both lying down and standing up thanks to a special locking mechanism in their legs!</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🧠</div>
+                    <h3>Smart Cookies</h3>
+                    <p>Horses can recognize human emotions and remember human friends after years of separation!</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🏃‍♂️</div>
+                    <h3>Speed Demons</h3>
+                    <p>The fastest recorded horse speed is 55 mph! That's faster than most cars in the city.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🦷</div>
+                    <h3>Tooth Truth</h3>
+                    <p>You can tell a horse's age by looking at their teeth! They keep growing throughout their life.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">❤️</div>
+                    <h3>Big Hearts</h3>
+                    <p>A horse's heart weighs about 8-10 pounds and pumps 8 gallons of blood per minute!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horse Breeds Section -->
+    <section id="breeds" class="breeds-section">
+        <div class="container">
+            <h2 class="section-title">Meet the Horse Breeds! 🌟</h2>
+            <div class="breeds-carousel">
+                <div class="breed-card active">
+                    <div class="breed-image">🐴</div>
+                    <h3>Arabian</h3>
+                    <p>Known for their distinctive head shape and high tail carriage. One of the oldest horse breeds!</p>
+                    <div class="breed-stats">
+                        <span class="stat">Speed: ⭐⭐⭐⭐</span>
+                        <span class="stat">Endurance: ⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-image">🐎</div>
+                    <h3>Thoroughbred</h3>
+                    <p>The ultimate racing horses! Known for their speed and athletic ability.</p>
+                    <div class="breed-stats">
+                        <span class="stat">Speed: ⭐⭐⭐⭐⭐</span>
+                        <span class="stat">Endurance: ⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-image">🦄</div>
+                    <h3>Friesian</h3>
+                    <p>Majestic black horses with flowing manes and feathered legs. Pure elegance!</p>
+                    <div class="breed-stats">
+                        <span class="stat">Beauty: ⭐⭐⭐⭐⭐</span>
+                        <span class="stat">Grace: ⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-image">🐴</div>
+                    <h3>Clydesdale</h3>
+                    <p>Gentle giants known for their strength and beautiful feathered feet!</p>
+                    <div class="breed-stats">
+                        <span class="stat">Strength: ⭐⭐⭐⭐⭐</span>
+                        <span class="stat">Gentleness: ⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="previousBreed()">❮</button>
+                <button class="carousel-btn next" onclick="nextBreed()">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <h2 class="section-title">Horse Games & Fun! 🎮</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <h3>🎲 Horse Name Generator</h3>
+                    <p>Generate amazing names for your dream horse!</p>
+                    <button class="game-btn" onclick="generateHorseName()">Generate Name</button>
+                    <div id="horse-name-result" class="game-result"></div>
+                </div>
+                <div class="game-card">
+                    <h3>🏇 Virtual Horse Race</h3>
+                    <p>Watch horses race across your screen!</p>
+                    <button class="game-btn" onclick="startRace()">Start Race!</button>
+                    <div id="race-track" class="race-track">
+                        <div class="horse-racer" id="horse1">🐴</div>
+                        <div class="horse-racer" id="horse2">🐎</div>
+                        <div class="horse-racer" id="horse3">🦄</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <h3>🧠 Horse Trivia</h3>
+                    <p id="trivia-question">Click to get a horse trivia question!</p>
+                    <button class="game-btn" onclick="getTrivia()">New Question</button>
+                    <div id="trivia-answer" class="game-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Horse Emoji Gallery! 🖼️</h2>
+            <div class="emoji-gallery">
+                <div class="emoji-card" onclick="animateEmoji(this)">🐴</div>
+                <div class="emoji-card" onclick="animateEmoji(this)">🐎</div>
+                <div class="emoji-card" onclick="animateEmoji(this)">🦄</div>
+                <div class="emoji-card" onclick="animateEmoji(this)">🏇</div>
+                <div class="emoji-card" onclick="animateEmoji(this)">🎠</div>
+                <div class="emoji-card" onclick="animateEmoji(this)">🐴</div>
+                <div class="emoji-card" onclick="animateEmoji(this)">🦓</div>
+                <div class="emoji-card" onclick="animateEmoji(this)">🥕</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🐴 Made with love for horse enthusiasts everywhere! 🐴</p>
+            <p>Gallop into fun at Horseland!</p>
+            <div class="footer-horses">
+                <span>🐴</span>
+                <span>🦄</span>
+                <span>🐎</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
