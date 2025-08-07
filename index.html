@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐎 Galloping Fun - All About Horses! 🐎</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="bounce">🐎 Welcome to Horse Paradise! 🐎</h1>
+            <p class="subtitle">Saddle up for an amazing journey into the world of magnificent horses!</p>
+            <button class="cta-button" onclick="scrollToSection('facts')">Start Galloping!</button>
+        </div>
+        <div class="horse-animation">
+            <div class="running-horse">🐎</div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#facts" onclick="scrollToSection('facts')">🌟 Fun Facts</a></li>
+            <li><a href="#breeds" onclick="scrollToSection('breeds')">🏇 Breeds</a></li>
+            <li><a href="#quiz" onclick="scrollToSection('quiz')">🎯 Horse Quiz</a></li>
+            <li><a href="#sounds" onclick="scrollToSection('sounds')">🔊 Horse Sounds</a></li>
+        </ul>
+    </nav>
+
+    <section id="facts" class="facts-section">
+        <div class="container">
+            <h2>🌟 Amazing Horse Facts! 🌟</h2>
+            <div class="facts-grid">
+                <div class="fact-card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        <h3>🏃‍♂️ Speed Demons</h3>
+                        <p>Click to learn more!</p>
+                    </div>
+                    <div class="card-back">
+                        <p>The fastest recorded horse speed is 55 mph (88 km/h) by a Quarter Horse named Winning Brew!</p>
+                    </div>
+                </div>
+                
+                <div class="fact-card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        <h3>👁️ Super Vision</h3>
+                        <p>Click to discover!</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Horses have nearly 360-degree vision and can see almost everything around them!</p>
+                    </div>
+                </div>
+                
+                <div class="fact-card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        <h3>😴 Sleep Standing</h3>
+                        <p>Click to find out!</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Horses can sleep both lying down and standing up thanks to a special locking mechanism in their legs!</p>
+                    </div>
+                </div>
+                
+                <div class="fact-card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        <h3>🧠 Smart Cookies</h3>
+                        <p>Click to explore!</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Horses can learn their names and come when called, just like dogs!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="breeds" class="breeds-section">
+        <div class="container">
+            <h2>🏇 Meet the Horse Breeds! 🏇</h2>
+            <div class="breed-carousel">
+                <div class="breed-card active">
+                    <div class="breed-emoji">🐴</div>
+                    <h3>Arabian</h3>
+                    <p>Known for their distinctive head shape and high tail carriage. They're one of the oldest horse breeds!</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">🏇</div>
+                    <h3>Thoroughbred</h3>
+                    <p>Famous for racing! These athletic horses are bred for speed and agility.</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">🎠</div>
+                    <h3>Clydesdale</h3>
+                    <p>Gentle giants! These draft horses are known for their feathered feet and kind nature.</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">🦄</div>
+                    <h3>Shetland Pony</h3>
+                    <p>Small but mighty! These ponies are incredibly strong for their size.</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button onclick="previousBreed()">← Previous</button>
+                <button onclick="nextBreed()">Next →</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2>🎯 Test Your Horse Knowledge! 🎯</h2>
+            <div class="quiz-container">
+                <div id="question-container">
+                    <h3 id="question">What is a baby horse called?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">Puppy</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">Kitten</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, true)">Foal</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">Cub</button>
+                    </div>
+                </div>
+                <div id="quiz-result" class="hidden">
+                    <p id="result-text"></p>
+                    <button onclick="nextQuestion()">Next Question!</button>
+                </div>
+                <div class="score">Score: <span id="score">0</span>/5</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sounds" class="sounds-section">
+        <div class="container">
+            <h2>🔊 Horse Sounds & Fun! 🔊</h2>
+            <div class="sound-buttons">
+                <button class="sound-btn" onclick="playSound('neigh')">🐴 Neigh!</button>
+                <button class="sound-btn" onclick="playSound('gallop')">🏃‍♂️ Gallop!</button>
+                <button class="sound-btn" onclick="playSound('whinny')">😊 Whinny!</button>
+            </div>
+            <div class="fun-activities">
+                <div class="activity-card">
+                    <h3>🎨 Virtual Horse Care</h3>
+                    <div class="horse-care">
+                        <div class="virtual-horse" id="virtualHorse">🐴</div>
+                        <div class="care-buttons">
+                            <button onclick="feedHorse()">🥕 Feed</button>
+                            <button onclick="brushHorse()">🪥 Brush</button>
+                            <button onclick="petHorse()">🤲 Pet</button>
+                        </div>
+                        <p id="horse-mood">Your horse is happy! 😊</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>🐎 Made with love for horse enthusiasts everywhere! 🐎</p>
+            <p>Keep galloping and exploring the amazing world of horses!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
