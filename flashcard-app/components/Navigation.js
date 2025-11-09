@@ -20,6 +20,13 @@ const Navigation = () => {
           </Text>
         </Link>
       </Box>
+      <Box p="2">
+        <Link href="/horse-game" passHref>
+          <Text fontSize="lg" fontWeight="bold" _hover={{ cursor: 'pointer' }}>
+            🐴 Horse Game
+          </Text>
+        </Link>
+      </Box>
     </Flex>
   );
 };
