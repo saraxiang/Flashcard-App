@@ -20,6 +20,13 @@ const Navigation = () => {
           </Text>
         </Link>
       </Box>
+      <Box p="2">
+        <Link href="/wordle" passHref>
+          <Text fontSize="lg" fontWeight="bold" _hover={{ cursor: 'pointer' }}>
+            🎮 Wordle Game
+          </Text>
+        </Link>
+      </Box>
     </Flex>
   );
 };
