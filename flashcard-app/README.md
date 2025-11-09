@@ -66,3 +66,15 @@ To check for linting issues:
 ```bash
 npm run lint
 ```
+
+## 🚀 Deployment
+
+Ready to deploy your game? See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+**Quick Deploy to Vercel (Recommended):**
+1. Visit [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click "Add New Project" and import this repository
+3. Set root directory to `flashcard-app`
+4. Click "Deploy" and you're live!
+
+Your game will be deployed with automatic HTTPS, global CDN, and continuous deployment on every push!
